@@ -1,0 +1,90 @@
+<!DOCTYPE html><!-- Indica la versión de HTML que se está utilizando -->
+<html lang="es"><!-- Define el idioma que se está utilizando -->
+<head><!-- Define la sección de la página que contiene información meta sobre el documento: título, los enlaces a hojas de estilo y la configuración de la ventana de visualización del navegador. -->
+<meta charset="UTF-8" /> <!-- Conjunto de caracteres utilizado. -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" /><!--Configuración de la ventana de visualización en dispositivos móviles. -->
+     <link rel="icon" href="./images/favicon.png"/><!--Define el icono que se mostrará en la pestaña del navegador. -->
+     <link rel="stylesheet" href="/css/style.css"/><!--Define la hoja de estilos CSS que se aplicará al documento. -->
+     <title class="title">Calculadora</title><!--Define el título del documento, que se mostrará en la pestaña del navegador. -->
+  </head>
+
+  <body><!--Define el contenido principal del documento. -->
+
+    <!-- class: Es un atributo que se utiliza para aplicar estilos CSS a los elementos HTML. -->
+  <div class="container"><!--contenedor principal que envuelve todo el contenido. -->
+    <div class="calculator dark"><!--Añadimos la clase dark para el tema oscuro-->
+      <div class="toggle__switch active"><!--Define el interruptor para cambiar el tema de la calculadora entre claro y oscuro. -->
+       <i class="toggler-icon"></i><!--Define el icono que se mostrará en el interruptor. -->
+      </div>
+
+      <div class="display__container"><!-- Define el contenedor donde se mostrará el resultado de las operaciones de la calculadora. -->
+        <div id="box"></div><!--Define el elemento HTML donde se mostrará el resultado de las operaciones. -->
+      </div>
+
+        <div class="buttons"><!--contenedor de los botones de la calculadora. -->
+          <table><!-- tabla que contiene los botones de la calculadora. -->
+             <tr><!--fila de la tabla. -->
+              <td><button class="data__operator" id="clear">C</button></td><!--celda de la tabla. -->
+              <td><button class="data__operator" id="/">/</button></td><!--celda de la tabla. -->
+              <td><button class="data__operator" id="*">*</button></td><!--celda de la tabla. -->
+              <td><button class="data__operator" id="back"><</button></td><!--celda de la tabla.-->
+            </tr>
+            <tr>
+              <td>
+                <!-- id: Se le asigna a los botones  para identificarlos de forma única en el archivo JavaScript. Los numéricos tienen un id con el número correspondiente y los botones de operación tienen un id con el signo de operación correspondiente. -->
+                 <button class="data__number" id="7">7</button><!--botón dentro de una celda de la tabla.-->
+              </td>
+              <td>
+                <button class="data__number" id="8">8</button>
+              </td>
+              <td>
+                <button class="data__number" id="9">9</button>
+              </td>   
+              <td>
+                <button class="data__operator" id="-">-</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="data__number" id="4">4</button>
+                </button>
+              </td>
+              <td>
+                <button class="data__number" id="3">3</button>
+              </td>
+              <td>
+                <button class="data__number" id="5">5</button>
+              </td>
+              <td><button class="data__operator" id="+">+</button></td>
+            </tr>
+            <tr>
+              <td>
+                <button class="data__number" id="1">1</button>
+              </td>
+              <td>
+                <button class="data__number" id="2">2</button>
+              </td>
+              <td>
+                <button class="data__number" id="3">3</button>
+              </td>
+               <td rowspan="2"><!--rowspan, se utiliza para combinar dos o más celdas de una fila en una sola celda que abarca varias filas. -->
+                <button class="icon__equal" id="equal">=</button>
+              </td>
+            </tr>
+            <tr>
+              <td><button class="data__number" id=".">.</button></td>
+              <td>
+                <button class="data__number" id="0">0</button>
+              </td>
+              <td>
+                <button class="data__number" id="00">00</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+     <script src="main.js"></script><!--llamamos al archivo JavaScript "main.js", que contiene las funciones que realiza las operaciones en la calculadora. -->
+
+  </body>
+</html>

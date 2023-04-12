@@ -1,0 +1,163 @@
+//Formateamos posicionamiento por defecto de toda la página.
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: all 0.8s ease;
+
+}
+
+//Todo lo que escribamos en Sass se mapea automaticamente en CSS. Sass es un preprocesador de CSS
+
+//Fondo pantalla
+body {
+    background: linear-gradient(45deg, #008F8C, #fffde7);
+}
+
+
+//Contenedor calculadora
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex; //Elemento flexible
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; //Mover elemento flexible en varias lineas segun el dispositivo
+
+}
+
+
+//Posicionamiento contenedor y estilos botones números y operadores
+.calculator {
+    position: relative; // Es el padre
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgb(187, 130, 130);
+    background-color: #eed062;
+
+
+    // Visor de números
+    #box {
+        margin: 10px;
+        height: 60px;
+        width: auto;
+        font-size: 30px;
+        font-weight: 900;
+        border-radius: 20px;
+        align-items: flex-end;
+        display: flex;
+    }
+
+
+    .display__container {
+        width: auto;
+        margin: 10px;
+        border: solid 2px #fffde7;
+        border-radius: 20px;
+    }
+
+    //Botones
+    button #clear {
+        background-color: #ffd5d8;
+        color: #2f5e1e;
+    }
+
+    // Boton número
+    .data__number {
+        background-color: #e16fe0;
+        color: #000;
+    }
+
+    //Boton operador
+    .data__operator {
+        background-color: #ffd0fb;
+        color: #f967f3;
+    }
+
+    //Boton operador
+    .data__operator {
+        background-color: #adf9e7;
+        color: #000;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    //Boton igual
+    .icon__igual {
+        height: 130px;
+    }
+
+    button {
+        box-shadow: 0 0 5px (#727171);
+    }
+
+
+    // Dark
+    &.dark {
+        background-color: #e572e1;
+
+        #display {
+            color: #f8fafb;
+        }
+
+        #clear {
+            background-color: #74d822;
+        }
+
+        .data__number {
+            background-color: #34f173;
+        }
+    }
+}
+
+//Estilos a todos los botones
+button {
+    height: 60px;
+    width: 60px;
+    font-size: 20px;
+    border: 0;
+    margin: 3px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 50ms ease; //Transicion para el cambio de propiedades
+
+    &:hover {
+        //Decorador hover cuando pasemos el ratón por encima
+        transform: scale(0.5);
+    }
+}
+
+.toggle__switch {
+    position: absolute; //Posicion absoluta al padre -calculator-
+    z-index: 1; //Poner todo delante
+    top: 10px;
+    right: 30px;
+    color: #67dce9;
+    cursor: pointer;
+
+    //Decorador antes de
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 20px;
+        width: 20px;
+        margin: 10px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #0db5e3;
+    }
+}
+
+//Estilos al activador
+.toggle__switch .active {
+    color: #333;
+
+    &::before {
+        //Decorador antes de
+        background-color: #11ef3a;
+    }
+}
