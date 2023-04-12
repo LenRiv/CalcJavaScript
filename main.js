@@ -43,7 +43,7 @@ allButtons.forEach((item) => {
 });
 
 
-//Modo oscuro
+//Modo oscuro//
 let isDark = true;//Empieza en true/verdadero
 
 activeSwitch.onclick = () => {
