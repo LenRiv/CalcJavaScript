@@ -1,5 +1,5 @@
 
-//Seleccionar elementos HTML.//
+//Seleccionar elementos de HTML.//
 
 //Visor de la calculadora
 const display = document.querySelector("#box");
@@ -21,12 +21,12 @@ allButtons.forEach((item) => {
     if (item.id == "clear") {
       display.innerText = "";
 
-    //Condicion para el control del boton de borrado uno a uno
+    //Condicion para control del boton de borrado uno a uno
     } else if (item.id == "back") {
       let string = display.innerText.toString();
       display.innerText = string.substring(0, string.length - 1);
 
-    //Metodo eval() para el control de operaciones
+    //Metodo eval() para control de operaciones
     } else if (display.innerText != "" && item.id == "equal") {
       display.innerText = eval(display.innerText);
 
@@ -44,11 +44,11 @@ allButtons.forEach((item) => {
 
 
 //Modo oscuro
-let isDark = true;//Empieza en true
+let isDark = true;//Empieza en true/verdadero
 
 activeSwitch.onclick = () => {
   calculator.classList.toggle("dark");//Inicia todo el tema dark
   activeSwitch.classList.toggle("active");//Estado inicial
-  isDark = !isDark;//Cambia a false y vuelve al estado inicial
+  isDark = !isDark;//Cambia a false/falso y vuelve al estado inicial
 
 };
