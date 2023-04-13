@@ -28,7 +28,7 @@ body {
   box-shadow: 0 0 30px rgb(187, 130, 130);
   background-color: #eed062;
 }
-.calculator #display {
+.calculator #box {
   margin: 10px;
   height: 60px;
   width: auto;
@@ -38,7 +38,7 @@ body {
   align-items: flex-end;
   display: flex;
 }
-.calculator .display-screen {
+.calculator .display_container {
   width: auto;
   margin: 10px;
   border: solid 2px #fffde7;
@@ -48,6 +48,21 @@ body {
   background-color: #ffd5d8;
   color: #2f5e1e;
 }
+
+button {
+  height: 60px;
+  width: 60px;
+  font-size: 20px;
+  border: 0;
+  margin: 3px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 50ms ease;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
 .calculator .data__number {
   background-color: #e16fe0;
   color: #000;
@@ -81,7 +96,7 @@ body {
   background-color: #34f173;
 }
 
-.theme-toggler {
+.toggle__switch {
   position: absolute;
   z-index: 1;
   top: 10px;
@@ -89,7 +104,7 @@ body {
   color: #67dce9;
   cursor: pointer;
 }
-.theme-toggler::before {
+.toggle__switch::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -101,25 +116,13 @@ body {
   background-color: #0db5e3;
 }
 
-.theme-toggler.active {
+.toggle__switch.active {
   color: #333;
 }
-.theme-toggler.active::before {
+.toggle__switch.active::before {
   background-color: #11ef3a;
 }
 
-button {
-  height: 60px;
-  width: 60px;
-  font-size: 20px;
-  border: 0;
-  margin: 3px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 50ms ease;
-}
-button:hover {
-  transform: scale(1.1);
-}
+
 
 /*# sourceMappingURL=style.css.map */
